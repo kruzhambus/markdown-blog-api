@@ -35,5 +35,5 @@ app.listen(4444, (err) => {
 		return console.log(err)
 	}
 
-	console.log('Server OK')
+	console.log('Server started')
 })

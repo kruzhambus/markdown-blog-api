@@ -37,7 +37,7 @@ export const register = async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json({
-      message: 'Не удалось зарегистрироваться',
+      message: 'Failed to register',
     });
   }
 };
@@ -48,7 +48,7 @@ export const login = async (req, res) => {
 
     if (!user) {
       return res.status(404).json({
-        message: 'Пользователь не найден',
+        message: 'User is not found',
       });
     }
 
@@ -56,7 +56,7 @@ export const login = async (req, res) => {
 
     if (!isValidPass) {
       return res.status(400).json({
-        message: 'Неверный логин или пароль',
+        message: 'wrong login or password',
       });
     }
 
@@ -90,7 +90,7 @@ export const getMe = async (req, res) => {
 
     if (!user) {
       return res.status(404).json({
-        message: 'Пользователь не найден',
+        message: 'No user found',
       });
     }
 
@@ -100,7 +100,7 @@ export const getMe = async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json({
-      message: 'Нет доступа',
+      message: 'No access',
     });
   }
 };
